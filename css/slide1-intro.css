@@ -38,10 +38,7 @@ body {
 
 }
 .intro-header {
-  font-family: Oswald, sans-serif;
-  font-size: 120px;
-  color: rgba(255, 255, 255, 0.5);
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-duration: 1000ms;
   margin: 0px;
 }
@@ -52,7 +49,7 @@ body {
   animation-duration: 1s;
   padding-left: 10px;
 }
-.intro-cocktail-container>span{
+/* .intro-cocktail-container>span{
   animation: shake 0.5s infinite;
 }
 
@@ -90,22 +87,22 @@ body {
   100% {
     transform: translate(1px, 1px) rotate(0deg);
   }
-}
+} */
 
 .intro-links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 60px;
-  padding-left:10px;
-  animation-delay: 6s;
+  padding-left: 10px;
+  animation-delay: 3s;
   animation-duration: 300ms;
 }
 .intro-links-reflections {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  animation-delay: 6s;
+  animation-delay: 3s;
   animation-duration: 300ms;
 }
 
