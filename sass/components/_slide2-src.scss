@@ -1,0 +1,167 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-image: url(../img/slide2-bg1.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .carousel {
+    position: relative;
+    z-index: 3;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .carousel-item {
+    --items: 8;
+    --width: clamp(240px, 25vw,  400px);
+    --height: clamp(240px, 25vw,  400px);
+    --x: calc(var(--active) * 600%);
+    --y: calc(var(--active) * 200%);
+    --rot: calc(var(--active) * 120deg);
+    --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
+    overflow: hidden;
+    position: absolute;
+    z-index: var(--zIndex);
+    width: var(--width);
+    height: var(--height);
+    margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    user-select: none;
+    transform-origin: 0% 100%;
+    box-shadow: 0 10px 50px 10px rgba(0, 0, 0, .5);
+    background: black;
+    pointer-events: all;
+    transform:  translate(var(--x), var(--y)) rotate(var(--rot)) ;
+    transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
+  
+    .carousel-box {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+      opacity: var(--opacity);
+  
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .5));
+      }
+    }
+  
+    .carousel-title {
+        font-family: Alumni Sans, sans-serif;
+        text-transform: uppercase;
+      position: absolute;
+      z-index: 3;
+      color: #fff;
+      bottom: 20px;
+      left: 20px;
+      transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+      font-size: 30px;
+      text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
+      @media screen and (max-width: 768px) {
+          font-size: 16px;
+      }
+    
+    &--blue {
+        color:#1c7cff;
+    }
+
+    &--yellow {
+        color:#ffb417;
+    }
+    }
+  
+    .carousel-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  }
+  
+  .carousel-layout {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  
+    .carousel-box {
+      position: absolute;
+      bottom: -100px;
+      left: 5px;
+      transform-origin: 0% 10%;
+      transform: rotate(-90deg);
+      font-size: 120px;
+    }
+    .carousel-box-text {
+        color: #fff;
+        font-size: 120px;
+        text-transform: uppercase;
+        opacity: .25;
+        margin: 0px;
+        padding: 0px;
+      }
+    .carousel-box-line {
+        font-family: Alumni Sans, sans-serif;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2.4rem;
+        margin: 0px;
+        margin-top:-20px;
+        padding: 0px;
+        opacity:0.75;
+        padding-left: 4px;
+      }
+  }
+  
+  .cursor {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .2);
+    margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
+    transition: transform .85s cubic-bezier(0, 0.02, 0, 1);
+    display: none;
+    pointer-events: none;
+    
+    @media (pointer: fine) {
+      display: block;
+    }
+  }
+  
+  .cursor2 {
+    --size: 2px;
+    transition-duration: .7s;
+  }
+  .nav-next-top {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    opacity: 1;
+    animation-delay: 5s;
+    z-index: 10;
+}

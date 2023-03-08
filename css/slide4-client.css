@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #000;
+  }
+  
+  .heroContainer {
+    position: relative;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .heroText {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    text-align: right;
+    font-family: Alumni Sans, sans-serif;
+    line-height: 0.8;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.4);
+  }
+  
+  .heroText .cityText {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.4rem;
+  }
+  
+  .heroText .cityText.animate {
+    animation: slide-down .5s ease;
+  }
+  
+  .heroText .countryText {
+    font-size: 72px;
+  }
+  
+  .heroText .countryText.animate {
+    animation: slide-up .5s ease;
+  }
+  
+  .countries {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 10, 65, 0.4), rgba(0, 3, 20, 0.5));
+    backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  }
+  
+  .countries .options {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  
+  .countries .options .option {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    transition: all .2s ease-in;
+  }
+  
+  .countries .options .option:not(.active):hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .clientsDesc {
+    display: inline-block;
+    padding: 2vw;
+    width: 40vw;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Jost, sans-serif;
+    font-size: 20px;
+    text-transform: none;
+    line-height: 1.5;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
+  }
+
+  .anim__info {
+    animation-duration: 1000ms;
+    animation-delay: 500ms;
+  }
+
+  .focus-group-id {
+    font-size: 60px;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.25);
+
+  }
+  .focus {
+    font-family: Alumni Sans, sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0px;
+    padding: 0px;
+    margin-top: -5px;
+    letter-spacing: 0.05rem;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.25);
+
+  }
+  .group {
+    font-family: Oswald, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0.45rem;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.25);
+
+  }
+  
+  .countries .options .option.active {
+    transform: scale(1.3) translateX(40px);
+  }
+  
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .heroText .cityText {
+      font-size: 24px;
+    }
+    
+    .heroText .countryText {
+      font-size: 100px;
+    }
+    
+    .countries {
+      width: auto;
+    }
+  }
+
+  .nav-next-bottom {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0.5;
+    animation-delay: 5s;
+    z-index: 10;
+}

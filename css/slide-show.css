@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    background-image: url(../img/slide2-bg1.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper{
+    width:100%;
+    height:100%;
+    min-height: 100vh;
+    position: relative;
+    background-image: url("../img/slide-show-bg1.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.glass {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    z-index: 3;
+    animation-delay: 1400ms;
+    animation-duration: 600ms;
+}
+.mint {
+    position: absolute;
+    top: -20px;
+    right: -50px;
+    z-index: 30;
+    rotate: 30deg;
+    scale: 0.65;
+    animation-delay: 1450ms;
+    animation-duration: 600ms;
+}
+.paper {
+    position: absolute;
+    bottom: -500px;
+    right: -450px;
+    z-index: 2;
+    rotate: -10deg;
+    scale: 0.75;
+    animation-delay: 1200ms;
+    animation-duration: 200ms;
+}
+.paper-wrapper {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 5;
+    rotate: -10deg;
+}
+.text1 {
+    position: absolute;
+    bottom: 250px;
+    right: -250px;
+    scale: 0.4;
+    animation-delay: 5000ms;
+    animation-duration: 300ms;
+}
+.text2 {
+    position: absolute;
+    bottom: 210px;
+    right: -150px;
+    scale: 0.4;
+    animation-delay: 5300ms;
+    animation-duration: 300ms;
+}
+.text3 {
+    position: absolute;
+    bottom: 153px;
+    right: -50px;
+    scale: 0.4;
+    animation-delay: 5600ms;
+    animation-duration: 300ms;
+}
+.text4 {
+    position: absolute;
+    bottom: 83px;
+    right: -100px;
+    scale: 0.4;
+    animation-delay: 5900ms;
+    animation-duration: 300ms;
+}
+.text5 {
+    position: absolute;
+    bottom: 69px;
+    right: -10px;
+    scale: 0.4;
+    animation-delay: 6200ms;
+    animation-duration: 300ms;
+}
+.pen {
+    position: absolute;
+    bottom: -900px;
+    right: -200px;
+    z-index: 20;
+    rotate: -25deg;
+    scale: 0.45;
+    animation-delay: 7000ms;
+    animation-duration: 300ms;
+}
+.keyboard {
+    position: absolute;
+    top: -600px;
+    left: -800px;
+    scale: 0.65;
+    rotate: -3deg;
+    z-index: 3;
+    animation-delay: 1000ms;
+    animation-duration: 200ms;
+}
+.headphone {
+    position: absolute;
+    top: -750px;
+    left: -950px;
+    scale: 0.45;
+    rotate: -30deg;
+    z-index: 4;
+    animation-delay: 1800ms;
+    animation-duration: 300ms;
+}
+.phone {
+    position: absolute;
+    bottom: -40px;
+    left: 600px;
+    width: 390px;
+    height: 729px;
+    background-image: url(../img/slide-show_phone.webp);
+    background-repeat: no-repeat;
+    rotate: -15deg;
+    z-index: 3;
+    filter: none;
+    animation-delay: 2000ms;
+    animation-duration: 300ms;
+}
+.phone-iframe {
+    margin-top: 47px;
+    margin-left: 18px;
+    height: 613px;
+    width: 320px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    filter: none;
+    border: none;
+    animation-delay: 3700ms;
+    animation-duration: 300ms;
+}
+
+.content {
+    filter: none;
+    transition: filter 0.3s ease-out;
+  }
+  
+  .phone:hover ~ .content:not(.phone) {
+    filter: blur(5px);
+  }
+  
+  .phone:hover .phone-iframe {
+    filter: none;
+  }
+  .phone-iframe:hover {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="white" opacity="0.75"/></svg>') 24 24, auto;
+  }
+
+.nav-next-bottom {
+    position: absolute;
+    right: 32px;
+    top: 29px;
+    opacity: 0.25;
+    animation-delay: 5s;
+    z-index: 100;
+}
