@@ -12,6 +12,7 @@ body{
     /* background-image: url(../img/slide2-bg1.gif);
     background-repeat: no-repeat;
     background-size: cover; */
+    overflow: hidden;
 }
 .wrapper{
     width:100%;
@@ -146,15 +147,19 @@ body{
 .phone-iframe {
     margin-top: 47px;
     margin-left: 18px;
-    height: 613px;
+    height: 615px;
     width: 320px;
-    overflow-y: scroll;
-    overflow-x:hidden;
+    overflow: hidden;
+    /* overflow-y: scroll;
+    overflow-x:hidden; */
     filter: none;
     border: none;
     animation-delay: 3700ms;
     animation-duration: 300ms;
 }
+.phone-iframe::-webkit-scrollbar {
+    display: none;
+  }
 
 .content {
     filter: none;
