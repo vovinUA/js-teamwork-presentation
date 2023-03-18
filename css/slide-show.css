@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    min-height:100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +15,8 @@ body{
     overflow: hidden;
 }
 .wrapper{
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     min-height: 100vh;
     position: relative;
     background-image: url("../img/slide-show-bg1.webp");
@@ -144,21 +144,32 @@ body{
     animation-delay: 2000ms;
     animation-duration: 300ms;
 }
+.phone-wrapper {
+    position: absolute;
+    top: 47px;
+    left: 18px;
+}
 .phone-iframe {
-    margin-top: 47px;
-    margin-left: 18px;
-    height: 615px;
+    position: absolute;
+    z-index: 11;
     width: 320px;
+    scrollbar-width: 10px;
+    height: 615px;
     overflow: hidden;
-    /* overflow-y: scroll;
-    overflow-x:hidden; */
+    overflow-x: hidden;
     filter: none;
     border: none;
     animation-delay: 3700ms;
     animation-duration: 300ms;
 }
-.phone-iframe::-webkit-scrollbar {
-    display: none;
+
+iframe::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+  }
+ 
+  iframe::-webkit-scrollbar-thumb {
+    background-color: #000;
   }
 
 .content {
@@ -173,9 +184,9 @@ body{
   .phone:hover .phone-iframe {
     filter: none;
   }
-  .phone-iframe:hover {
+  /* .phone-iframe:hover {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="white" opacity="0.75"/></svg>') 24 24, auto;
-  }
+  } */
 
 .nav-next-bottom {
     position: absolute;
