@@ -31,7 +31,7 @@ body{
     top: 100px;
     width: 1040px;
     height: 450px;
-    background-image: url(../img/slide6-bg.gif);
+    background-image: url(../img/slide6-bg.webp);
     background-repeat: no-repeat;
     text-align: center;
     display: flex;
@@ -43,7 +43,7 @@ body{
     position: absolute;
     top: 550px;
     width: 600px;
-    background-image: url(../img/slide6-bg1.gif);
+    background-image: url(../img/slide6-bg1.webp);
     background-repeat: no-repeat;
     background-position: center;
 }
